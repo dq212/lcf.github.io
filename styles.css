@@ -1,0 +1,71 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1b1b1d;
+  color: #ccc;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+#template,
+#path {
+  fill: none;
+}
+#template {
+  stroke-width: 5px;
+  stroke: #444;
+}
+#path {
+  stroke: #0ae448;
+  stroke-width: 20px;
+  visibility: hidden;
+}
+#code,
+#value {
+  font-size: 2rem;
+  font-family: monospace;
+}
+#code {
+  color: #777;
+  margin: 20px;
+  position: relative;
+  visibility: hidden;
+}
+#current {
+  display: inline-block;
+  color: white;
+}
+#description {
+  max-width: 530px;
+  color: #777;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-align: left;
+}
+
+.box-a {
+  position: absolute;
+  top: 80vh;
+  left: 0;
+  width: 400px;
+  height: 600px;
+  background-color: #999;
+  z-index: 101;
+  overflow: hidden;
+}
+
+.copy-1 {
+  position: absolute;
+  top: 70vh;
+  left: 0;
+  text-align: center;
+  z-index: 102;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
