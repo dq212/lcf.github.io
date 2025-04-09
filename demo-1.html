@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js"></script>
+    <script src="/gsap-plus/minified/DrawSVGPlugin.min.js" ></script>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+   
+
+    <script src="scripts.js"></script>
+
+    <!-- The following plugins are only available for Club GSAP members.-->
+    <!-- <script src="/[YOUR_DIRECTORY]/DrawSVGPlugin.min.js"></script>
+    <script src="/[YOUR_DIRECTORY]/MotionPathHelper.min.js"></script> -->
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <title>Demo 1</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-a">#Box A
+           
+        </div>
+        <h2 class="copy-1">COPY 1</H2>
+    </div>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="516.3px"
+    height="190px" viewBox="0 0 516.3 190" style="enable-background:new 0 0 516.3 211.99;" xml:space="preserve">
+    <path id="template"
+        d="M9.13,99.99c0,0,18.53-41.58,49.91-65.11c30-22.5,65.81-24.88,77.39-24.88c33.87,0,57.55,11.71,77.05,28.47c23.09,19.85,40.33,46.79,61.71,69.77c24.09,25.89,53.44,46.75,102.37,46.75c22.23,0,40.62-2.83,55.84-7.43c27.97-8.45,44.21-22.88,54.78-36.7c14.35-18.75,16.43-36.37,16.43-36.37" />
+    <path id="path"
+        d="M9.13,99.99c0,0,18.53-41.58,49.91-65.11c30-22.5,65.81-24.88,77.39-24.88c33.87,0,57.55,11.71,77.05,28.47c23.09,19.85,40.33,46.79,61.71,69.77c24.09,25.89,53.44,46.75,102.37,46.75c22.23,0,40.62-2.83,55.84-7.43c27.97-8.45,44.21-22.88,54.78-36.7c14.35-18.75,16.43-36.37,16.43-36.37" />
+</svg>
+
+<!-- <div id="code">drawSVG:<div id="current">"100%"</div> -->
+</div>
+<button id="next" class="dark-grey-button club-demo-button" style="display:block; margin-bottom:20px;">Next
+    Example</button>
+
+
+    <!-- <div id="vidTrigger"></div>
+    <video src="https://assets.codepen.io/39255/output_960.mp4" playsinline="true" webkit-playsinline="true"
+        preload="auto" muted="muted" class="video-background"></video>
+
+    </div> -->
+
+
+
+
+
+  
+
+
+
+<script>
+    
+   
+
+    
+        var values = "100%;40% 60%;20 350;50% 50%;true;10%".split(";"),
+            currentIndex = 0;
+
+        //set the initial value
+        gsap.set("#path, #code", { visibility: "visible" });
+
+        function next() {
+
+            gsap.killTweensOf(next); //in case the user clicks, clear any delayed calls to this method. 
+            if (++currentIndex === values.length) {
+                currentIndex = 0;
+            }
+            if (values[currentIndex] === "true") {
+                gsap.set("#current", { text: (values[currentIndex]) });
+            } else {
+                gsap.set("#current", { text: ('"' + values[currentIndex] + '"') });
+            }
+            gsap.to("#path", { drawSVG: values[currentIndex], duration: 1, ease: "power1.inOut" });
+
+        }
+
+        document.querySelector("#next").addEventListener("click", next);
+
+
+        let tl = gsap.timeline({
+            defaults: { duration: 1 },
+            scrollTrigger: {
+                trigger: ".box-a",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: true
+            }
+        });
+
+        /*!
+             * © This code was written by Nicolai Palmkvist.
+             * For more information, visit my Elementor Youtube channel: https://www.youtube.com/@nicopalmkvist
+             */
+
+       
+
+    // TIMELINE
+
+
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+
+    });</script>
+
+
+
+</body>
+
+</html>

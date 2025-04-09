@@ -1,0 +1,270 @@
+html,
+body {
+  font-size: 20px;
+}
+
+.spacer {
+  height: 100vh;
+}
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #1b1b1d; */
+  color: #fff;
+  text-align: left;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  /* max-width: 1464px; */
+  height: 100vh;
+  background-color: transparent;
+}
+
+header {
+  padding: 1rem 1rem 1rem 0;
+  height: 6rem;
+  z-index: 5;
+}
+.inner-header {
+  margin: 0 auto;
+  max-width: 1464px;
+}
+
+section {
+  position: relative;
+  color: #121212;
+  height: 40rem;
+  z-index: 5;
+}
+
+.txt-shadow {
+  text-shadow: 1px 1px 5px white;
+}
+
+.img-logo {
+  mix-blend-mode: multiply;
+  width: 15rem;
+  display: block;
+}
+
+.btn:hover {
+  background-color: rgba(42, 96, 21, 0.7);
+  border: white 2px solid;
+  transition: all 0.3s ease-in;
+}
+
+.btn:active {
+  background-color: rgba(42, 96, 21, 0.8) !important;
+  border: white 2px solid;
+  transition: all 0.3s ease-in;
+}
+
+.btn {
+  display: block;
+  bottom: 10%;
+  left: 2%;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: none;
+  border: white 2px solid;
+  border-radius: 8px;
+}
+
+button.btn-donate {
+  position: sticky;
+  bottom: 5vh;
+  background-color: #316a1d;
+  z-index: 10;
+}
+
+.bg-map-1 {
+  background-image: url("/Assets/image2-13.jpeg");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  height: 100%;
+  max-height: 45rem;
+  position: relative;
+
+  z-index: -1;
+  /* min-height: 73rem;
+  max-height: 50rem;
+  overflow-x: hidden; */
+}
+.bg-map-2 {
+  background-image: url("/Assets/image8-22.png");
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: 0;
+  min-height: 40rem;
+  position: relative;
+  min-height: 40rem;
+  z-index: -1;
+  /* min-height: 73rem;
+  max-height: 50rem;
+  overflow-x: hidden; */
+}
+
+.bg-map-3 {
+  background-image: url("/Assets/image2-13.jpeg");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  height: 100%;
+  min-height: 30rem;
+  max-height: 45rem;
+  position: relative;
+
+  z-index: -1;
+  /* min-height: 73rem;
+  max-height: 50rem;
+  overflow-x: hidden; */
+}
+.bg-map-4 {
+  background-image: url("/Assets/image14-34.png");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  height: 100%;
+  min-height: 30rem;
+  max-height: 45rem;
+  position: relative;
+
+  z-index: -1;
+  /* min-height: 73rem;
+  max-height: 50rem;
+  overflow-x: hidden; */
+}
+
+#oldEmerald {
+  width: 100%;
+  height: 100%;
+  min-height: 40rem;
+}
+
+.lcf-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.inner-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.img-detail {
+  width: auto;
+  height: 100%;
+  max-height: 10rem;
+}
+/* COLORS */
+.bg-green {
+  background-color: #396f24;
+}
+
+/* TEXT */
+
+#copy-1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+#copy-2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+#copy-3 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+#copy-4 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* MODAL */
+
+.modal-dialog {
+  max-width: 30rem;
+}
+
+.modal-content {
+  background-color: #316a1d;
+}
+
+.btn-green-1 {
+  color: white;
+  background-color: #396f24;
+}
+
+.btn-green-2 {
+  color: white;
+  background-color: #396f24;
+}
+
+.pin {
+  background-image: url("/Assets2/pin.svg");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pin.pin-1 {
+  top: 24%;
+  left: 44%;
+}
+.pin.pin-2 {
+  top: 49%;
+  left: 40%;
+}
+.pin.pin-3 {
+  top: 39%;
+  left: 60%;
+}
